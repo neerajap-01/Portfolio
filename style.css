@@ -194,25 +194,178 @@ section .title::after{
   color: crimson;
   font-weight: 500;
 }
+/*
 .home .home-content .social-icons .wrapper{
   display: inline-flex;
 }  
 .home .home-content .social-icons .wrapper .icon{
   margin: 10px;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 .home .home-content .social-icons .wrapper .icon span{
   height: 35px;
+  position: relative;
   width: 35px;
+  z-index: 2;
   display: block;
-  background:crimson;
+  background: #fff;
   text-align: center;
   border-radius: 50%;
   box-shadow: 0 10px 10px rgba(0,0,0,0.1);
 }
 .home .home-content .social-icons .wrapper .icon span i{
   line-height: 35px;
+  font-size: 20px;
 }
-.home .home-content a{
+.home .home-content .social-icons .wrapper .icon:hover span{
+  color: #fff
+}
+.home .home-content .social-icons .wrapper .icon .tooltip{
+  position: absolute;
+  top: 0px;
+  background: #fff;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 25px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.home .home-content .social-icons .wrapper .icon:hover .tooltip{
+  opacity: 1;
+  top: -50px;
+  pointer-events: auto;
+}
+.home .home-content .social-icons .wrapper .icon .tooltip:before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.home .home-content .social-icons .wrapper .icon:hover span,
+.home .home-content .social-icons .wrapper .icon:hover .tooltip{
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.home .home-content .social-icons .wrapper .facebook:hover span,
+.home .home-content .social-icons .wrapper .facebook:hover .tooltip,
+.home .home-content .social-icons .wrapper .facebook:hover .tooltip:before{
+  background: #3B5999;
+}
+.home .home-content .social-icons .wrapper .twitter:hover span,
+.home .home-content .social-icons .wrapper .twitter:hover .tooltip,
+.home .home-content .social-icons .wrapper .twitter:hover .tooltip:before{
+  background: #46C1F6;
+}
+.home .home-content .social-icons .wrapper .instagram:hover span,
+.home .home-content .social-icons .wrapper .instagram:hover .tooltip,
+.home .home-content .social-icons .wrapper .instagram:hover .tooltip:before{
+  background: #e1306c;
+}
+.home .home-content .social-icons .wrapper .github:hover span,
+.home .home-content .social-icons .wrapper .github:hover .tooltip,
+.home .home-content .social-icons .wrapper .github:hover .tooltip:before{
+  background: #333;
+}
+.home .home-content .social-icons .wrapper .linkedin:hover span,
+.home .home-content .social-icons .wrapper .linkedin:hover .tooltip,
+.home .home-content .social-icons .wrapper .linkedin:hover .tooltip:before{
+  background: #0077B5;
+}
+*/
+.home .home-content .social-icons .wrapper{
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.home .home-content .social-icons .wrapper .button{
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  margin: 100px;
+  float: left;
+  color: #111;
+  overflow: hidden;
+  margin: 0 5px;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.home .home-content .social-icons .wrapper .button:hover{
+  width: 160px;
+}
+.home .home-content .social-icons .wrapper .button .icon{
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 40px;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(1):hover .icon{
+  background: #3B5999;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(2):hover .icon{
+  background: #46C1F6;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(3):hover .icon{
+  background: #e1306c;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(4):hover .icon{
+  background: #333;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(5):hover .icon{
+  background: #0077B5;
+}
+.home .home-content .social-icons .wrapper .button .icon i{
+  font-size: 20px;
+  line-height: 30px;
+  transition: all 0.3s ease-out;
+}
+.home .home-content .social-icons .wrapper .button:hover .icon i{
+  color: #fff;
+}
+.home .home-content .social-icons .wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(1) span{
+  color: #3B5999;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(2) span{
+  color: #46C1F6;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(3) span{
+  color: #e1306c;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(4) span{
+  color: #333;
+}
+.home .home-content .social-icons .wrapper .button:nth-child(5) span{
+  color: #0077B5;
+}
+
+.home .home-content .hire-me a{
   display: inline-block;
   background: crimson;
   color: #fff;
@@ -224,7 +377,7 @@ section .title::after{
   border: 2px solid crimson;
   transition: all 0.3s ease;
 }
-.home .home-content a:hover{
+.home .home-content .hire-me a:hover{
   color: crimson;
   background: none;
 }
