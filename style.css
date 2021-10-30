@@ -310,6 +310,8 @@ section .title::after{
 }
 .home .home-content .social-icons .wrapper .button:hover{
   width: 160px;
+  background: none;
+  border: 2px solid crimson;
 }
 .home .home-content .social-icons .wrapper .button .icon{
   display: inline-block;
@@ -321,7 +323,7 @@ section .title::after{
   line-height: 40px;
 }
 .home .home-content .social-icons .wrapper .button:nth-child(1):hover .icon{
-  background: #3B5999;
+  background: crimson;
 }
 .home .home-content .social-icons .wrapper .button:nth-child(2):hover .icon{
   background: #46C1F6;
@@ -350,7 +352,7 @@ section .title::after{
   transition: all 0.3s ease-out;
 }
 .home .home-content .social-icons .wrapper .button:nth-child(1) span{
-  color: #3B5999;
+  color: crimson;
 }
 .home .home-content .social-icons .wrapper .button:nth-child(2) span{
   color: #46C1F6;
@@ -372,7 +374,7 @@ section .title::after{
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 6px;
   border: 2px solid crimson;
   transition: all 0.3s ease;
