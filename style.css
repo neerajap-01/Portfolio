@@ -199,19 +199,18 @@ section .title::after{
 }  
 .home .home-content .social-icons .wrapper .icon{
   margin: 10px;
-  color: black;
 }
 .home .home-content .social-icons .wrapper .icon span{
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   display: block;
-  background: #fff;
+  background:crimson;
   text-align: center;
   border-radius: 50%;
   box-shadow: 0 10px 10px rgba(0,0,0,0.1);
 }
 .home .home-content .social-icons .wrapper .icon span i{
-  line-height: 30px;
+  line-height: 35px;
 }
 .home .home-content a{
   display: inline-block;
