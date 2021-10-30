@@ -290,14 +290,13 @@ section .title::after{
 */
 .home .home-content .social-icons .wrapper{
   margin-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 30px;
 }
 .home .home-content .social-icons .wrapper .button{
   display: inline-block;
   height: 35px;
   width: 35px;
-  margin: 100px;
   float: left;
   color: #111;
   overflow: hidden;
@@ -310,8 +309,6 @@ section .title::after{
 }
 .home .home-content .social-icons .wrapper .button:hover{
   width: 160px;
-  background: none;
-  border: 2px solid crimson;
 }
 .home .home-content .social-icons .wrapper .button .icon{
   display: inline-block;
