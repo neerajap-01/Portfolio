@@ -34,12 +34,30 @@ $(document).ready(function() {
     const open = document.getElementById('open');
     const modal_container = document.getElementById('modal-container');
     const close = document.getElementById('close');
+    const home = document.getElementById('home');
+    const about = document.getElementById('about');
+    const education = document.getElementById('education');
+    const skills = document.getElementById('skills');
+    const projects = document.getElementById('projects');
+    const contact = document.getElementById('contact');
 
     open.addEventListener('click', () => {
       modal_container.classList.add('show');
+      home.classList.add('blur');
+      about.classList.add('blur');
+      education.classList.add('blur');
+      skills.classList.add('blur');
+      projects.classList.add('blur');
+      contact.classList.add('blur');
     });
     close.addEventListener('click', () => {
       modal_container.classList.remove('show');
+      home.classList.remove('blur');
+      about.classList.remove('blur');
+      education.classList.remove('blur');
+      skills.classList.remove('blur');
+      projects.classList.remove('blur');
+      contact.classList.remove('blur');
     });
 
     // typing animation script
