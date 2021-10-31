@@ -865,8 +865,10 @@ footer span a:hover{
     font-size: 35px;
   }
   .home .home-content .social-icons{
-    margin-bottom: -20px;
-    margin-top: 20px;
+    display: none;
+  }
+  .home .home-content .social-icons-1{
+    display: inline-flex;
   }
   .home .home-content a{
     font-size: 23px;
@@ -906,6 +908,12 @@ footer span a:hover{
   .home .home-content .text-3{
     font-size: 32px;
   }
+  .home .home-content .social-icons{
+    display: none;
+  }
+  .home .home-content .social-icons-1{
+    display: inline-flex;
+  }
   .home .home-content a{
     font-size: 20px;
   }
@@ -915,10 +923,7 @@ footer span a:hover{
 }
 @media (max-width: 570px){
   .home .home-content .social-icons{
-    margin-bottom: 100px;
-    margin-top: 20px;
     display: none;
-    border: 2px solid crimson;
   }
   .home .home-content .social-icons-1{
     display: inline-flex;
@@ -930,6 +935,12 @@ footer span a:hover{
   }
   .home .home-content .text-3{
     font-size: 27px;
+  }
+  .home .home-content .social-icons{
+    display: none;
+  }
+  .home .home-content .social-icons-1{
+    display: inline-flex;
   }
   .about .about-content .right .text, .skills .skills-content .left .text{
         font-size: 19px;
