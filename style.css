@@ -485,6 +485,8 @@ section .title::after{
   height: 400px;
   width: 400px;
   object-fit: cover;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+  border-radius: 200px;
 }
 .about .about-content .right{
   width: 55%;
@@ -536,6 +538,8 @@ section .title::after{
   width: calc(33% - 20px);
   background: #222;
   text-align: center;
+  display: block;
+  color: #fff;
   border-radius: 6px;
   padding: 50px 25px;
   cursor: pointer;
@@ -547,7 +551,7 @@ section .title::after{
 .education .edu-content .card .box{
   transition: all 0.3s ease;
 }
-.education .edu-content .card:hover .box{
+.education .edu-conte .card:hover .box{
   transform: scale(1.05);
 }
 .education .edu-content .card i{
@@ -557,12 +561,6 @@ section .title::after{
 }
 .education .edu-content .card:hover i{
   color: #fff;
-}
-.education .edu-content .card a{
-  color: crimson;
-}
-.education .edu-content .card:hover a{
-  color: yellow;
 }
 .education .edu-content .card .text{
   font-size: 25px;
