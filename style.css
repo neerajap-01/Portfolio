@@ -284,11 +284,14 @@ section .title::after{
   color: crimson;
   font-weight: 500;
 }
-/*
-.home .home-content .social-icons .wrapper{
+
+.home .home-content .social-icons-1{
+  display: none;
+}
+.home .home-content .social-icons-1 .wrapper{
   display: inline-flex;
 }  
-.home .home-content .social-icons .wrapper .icon{
+.home .home-content .social-icons-1 .wrapper .icon{
   margin: 10px;
   color: #111;
   display: flex;
@@ -300,7 +303,7 @@ section .title::after{
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
-.home .home-content .social-icons .wrapper .icon span{
+.home .home-content .social-icons-1 .wrapper .icon span{
   height: 35px;
   position: relative;
   width: 35px;
@@ -311,14 +314,14 @@ section .title::after{
   border-radius: 50%;
   box-shadow: 0 10px 10px rgba(0,0,0,0.1);
 }
-.home .home-content .social-icons .wrapper .icon span i{
+.home .home-content .social-icons-1 .wrapper .icon span i{
   line-height: 35px;
   font-size: 20px;
 }
-.home .home-content .social-icons .wrapper .icon:hover span{
+.home .home-content .social-icons-1 .wrapper .icon:hover span{
   color: #fff
 }
-.home .home-content .social-icons .wrapper .icon .tooltip{
+.home .home-content .social-icons-1 .wrapper .icon .tooltip{
   position: absolute;
   top: 0px;
   background: #fff;
@@ -332,12 +335,12 @@ section .title::after{
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
-.home .home-content .social-icons .wrapper .icon:hover .tooltip{
+.home .home-content .social-icons-1 .wrapper .icon:hover .tooltip{
   opacity: 1;
   top: -50px;
   pointer-events: auto;
 }
-.home .home-content .social-icons .wrapper .icon .tooltip:before{
+.home .home-content .social-icons-1 .wrapper .icon .tooltip:before{
   position: absolute;
   content: "";
   height: 15px;
@@ -348,36 +351,36 @@ section .title::after{
   transform: translateX(-50%) rotate(45deg);
   transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
-.home .home-content .social-icons .wrapper .icon:hover span,
-.home .home-content .social-icons .wrapper .icon:hover .tooltip{
+.home .home-content .social-icons-1 .wrapper .icon:hover span,
+.home .home-content .social-icons-1 .wrapper .icon:hover .tooltip{
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
 }
-.home .home-content .social-icons .wrapper .facebook:hover span,
-.home .home-content .social-icons .wrapper .facebook:hover .tooltip,
-.home .home-content .social-icons .wrapper .facebook:hover .tooltip:before{
+.home .home-content .social-icons-1 .wrapper .facebook:hover span,
+.home .home-content .social-icons-1 .wrapper .facebook:hover .tooltip,
+.home .home-content .social-icons-1 .wrapper .facebook:hover .tooltip:before{
   background: #3B5999;
 }
-.home .home-content .social-icons .wrapper .twitter:hover span,
-.home .home-content .social-icons .wrapper .twitter:hover .tooltip,
-.home .home-content .social-icons .wrapper .twitter:hover .tooltip:before{
+.home .home-content .social-icons-1 .wrapper .twitter:hover span,
+.home .home-content .social-icons-1 .wrapper .twitter:hover .tooltip,
+.home .home-content .social-icons-1 .wrapper .twitter:hover .tooltip:before{
   background: #46C1F6;
 }
-.home .home-content .social-icons .wrapper .instagram:hover span,
-.home .home-content .social-icons .wrapper .instagram:hover .tooltip,
-.home .home-content .social-icons .wrapper .instagram:hover .tooltip:before{
+.home .home-content .social-icons-1 .wrapper .instagram:hover span,
+.home .home-content .social-icons-1 .wrapper .instagram:hover .tooltip,
+.home .home-content .social-icons-1 .wrapper .instagram:hover .tooltip:before{
   background: #e1306c;
 }
-.home .home-content .social-icons .wrapper .github:hover span,
-.home .home-content .social-icons .wrapper .github:hover .tooltip,
-.home .home-content .social-icons .wrapper .github:hover .tooltip:before{
+.home .home-content .social-icons-1 .wrapper .github:hover span,
+.home .home-content .social-icons-1 .wrapper .github:hover .tooltip,
+.home .home-content .social-icons-1 .wrapper .github:hover .tooltip:before{
   background: #333;
 }
-.home .home-content .social-icons .wrapper .linkedin:hover span,
-.home .home-content .social-icons .wrapper .linkedin:hover .tooltip,
-.home .home-content .social-icons .wrapper .linkedin:hover .tooltip:before{
+.home .home-content .social-icons-1 .wrapper .linkedin:hover span,
+.home .home-content .social-icons-1 .wrapper .linkedin:hover .tooltip,
+.home .home-content .social-icons-1 .wrapper .linkedin:hover .tooltip:before{
   background: #0077B5;
 }
-*/
+
 .home .home-content .social-icons .wrapper{
   margin-bottom: 10px;
   padding-top: 5px;
@@ -861,6 +864,10 @@ footer span a:hover{
   .home .home-content .text-3{
     font-size: 35px;
   }
+  .home .home-content .social-icons{
+    margin-bottom: -20px;
+    margin-top: 20px;
+  }
   .home .home-content a{
     font-size: 23px;
     padding: 10px 30px;
@@ -906,7 +913,17 @@ footer span a:hover{
     width: 100%;
   }
 }
-
+@media (max-width: 570px){
+  .home .home-content .social-icons{
+    margin-bottom: 100px;
+    margin-top: 20px;
+    display: none;
+    border: 2px solid crimson;
+  }
+  .home .home-content .social-icons-1{
+    display: inline-flex;
+  }
+}
 @media (max-width: 500px){
   .home .home-content .text-2{
     font-size: 50px;
