@@ -41,6 +41,7 @@ body{
   cursor: pointer;
   opacity: 1;
   transition: all 0.3s ease;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.5);
 }
 .scroll-up-btn:hover{
   filter: brightness(90%);
