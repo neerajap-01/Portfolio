@@ -1,3 +1,7 @@
+# 404 notfound html linking
+
+ErrorDocument 404 /notfound404page.html
+
 #mod_rewrite starts here
 
 RewriteEngine on
