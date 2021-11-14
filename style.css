@@ -414,7 +414,7 @@ section .title::after{
   line-height: 40px;
 }
 .home .home-content .social-icons .wrapper .button:nth-child(1):hover .icon{
-  background: crimson;
+  background: #3B5999;
 }
 .home .home-content .social-icons .wrapper .button:nth-child(2):hover .icon{
   background: #46C1F6;
@@ -443,7 +443,7 @@ section .title::after{
   transition: all 0.3s ease-out;
 }
 .home .home-content .social-icons .wrapper .button:nth-child(1) span{
-  color: crimson;
+  color: #3B5999;
 }
 .home .home-content .social-icons .wrapper .button:nth-child(2) span{
   color: #46C1F6;
