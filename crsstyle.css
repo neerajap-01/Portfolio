@@ -9,7 +9,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  background: crimson;
+  background: #111;
 }
 /* custom scroll bar */
 ::-webkit-scrollbar {
