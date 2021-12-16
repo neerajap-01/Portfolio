@@ -132,8 +132,8 @@ section .title::after{
 }
 .view-modal {
   position: fixed;
-  height: 45px;
-  width: 42px;
+  height: 40px;
+  width: 37px;
   background: crimson;
   left: 30px;
   bottom: 30px;
@@ -245,11 +245,11 @@ header .close {
   background: #e1306c;
 }
 .icons a:nth-child(5) {
-  color: #0088cc;
+  color: #0077B5;
   border-color: #b3e6ff;
 }
 .icons a:nth-child(5):hover {
-  background: #0088cc;
+  background: #0077B5;
 }
 .icons a:hover {
   color: #fff;
@@ -989,6 +989,10 @@ footer span a:hover{
   text-decoration: underline;
 }
 
+.mockup {
+  display: none;
+}
+
 /*responsive media query start*/
 @media (max-width: 1104px){
   .about .about-content .left img{
@@ -1152,7 +1156,12 @@ footer span a:hover{
       line-height: 38px;
   }
   .popup {
-    left: 10%;
+    left: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 35px;
+    font-size: 23px;
+    line-height: 38px;
   }
 }
 @media (max-width: 435px){
