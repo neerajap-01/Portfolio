@@ -34,11 +34,11 @@
       <div class="content">
         <p>Share this Portfolio link via</p>
         <ul class="icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" class="facebook-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="twitter-btn"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="pinterest-btn"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="linkedin-btn"><i class="fab fa-linkedin-in"></i></a>
         </ul>
         <p>Or copy link</p>
         <div class="field">
@@ -68,12 +68,12 @@
 
       viewBtn.onclick = ()=> {
         popup.classList.toggle("show");
-        home.classList.add('blur');
-        about.classList.add('blur');
-        education.classList.add('blur');
-        skills.classList.add('blur');
-        projects.classList.add('blur');
-        contact.classList.add('blur');
+        home.classList.toggle('blur');
+        about.classList.toggle('blur');
+        education.classList.toggle('blur');
+        skills.classList.toggle('blur');
+        projects.classList.toggle('blur');
+        contact.classList.toggle('blur');
       }
       close.onclick = ()=> {
         viewBtn.click();
@@ -406,4 +406,6 @@
     <script src="script.js"></script>
 
   </body>  
+
+  <img class="mockup" src="./images/floating_mockup.jpg" alt="">
 </html>
