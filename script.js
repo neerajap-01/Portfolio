@@ -105,14 +105,10 @@ const whatsappBtn = document.querySelector('.whatsapp-btn');
 const twitterBtn = document.querySelector('.twitter-btn');
 const pinterestBtn = document.querySelector('.pinterest-btn');
 const linkedinBtn = document.querySelector('.linkedin-btn');
-const mockupImg = document.querySelector('.mockup');
 
 function init() {
-  
-
   let postUrl = encodeURI("https://www.neerajpal.me");
   let postTitle = encodeURI("Hi, check out this Portfolio website: ");
-  let postImg = mockupImg;
 
   facebookBtn.setAttribute("href", `https://www.facebook.com/sharer.php?u=${postUrl}`);
   whatsappBtn.setAttribute("href", `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`);
