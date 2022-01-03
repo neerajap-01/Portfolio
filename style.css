@@ -1171,6 +1171,10 @@ footer span a:hover{
   .popup {
     left: 5%;
   }
+  .about .about-content .right .card{
+    margin-top: 5px;
+    padding: 10px 40px;
+  }
 }
 @media (max-width: 390px){
   .popup {
