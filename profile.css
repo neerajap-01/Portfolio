@@ -139,7 +139,6 @@ body{
   border: none;
   text-decoration: none;
   outline: none;
-  padding: 12px 0;
   font-size: 17px;
   font-weight: 400;
   border-radius: 5px;
@@ -147,13 +146,15 @@ body{
   color: #31344b;
   z-index: 4;
 }
-.buttons button a{
-  text-decoration: none;
-  color: #31344b;
-}
-.buttons button:first-child{
+.buttons .msg{
   margin-right: 10px;
 }
-.buttons button:last-child{
+.buttons .home{
   margin-left: 10px;
+}
+.buttons .msg button{
+  padding: 12px 20px;
+}
+.buttons .home button{
+  padding: 12px 30px;
 }
