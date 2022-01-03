@@ -97,13 +97,11 @@ body{
   right: 0;
   background: #ecf0f3;
   border-radius: 50%;
-  transform: translateZ(50px);
   box-shadow: inset -3px -3px 7px #ffffff,
               inset  3px  3px 5px #ceced1;
 }
 .buttons button:hover::before{
   border-radius: 5px;
-  transform: translateZ(50px);
   z-index: -1;
 }
 .social-icons a i{
@@ -133,7 +131,7 @@ body{
   justify-content: space-between;
   transform: translateZ(50px);
 }
-.buttons button{
+.buttons a button{
   position: relative;
   width: 100%;
   border: none;
@@ -144,7 +142,7 @@ body{
   border-radius: 5px;
   cursor: pointer;
   color: #31344b;
-  z-index: 4;
+  z-index: 5;
 }
 .buttons .msg{
   margin-right: 10px;
