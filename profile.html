@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="profile.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <title>Profile</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
       </div>
     </div>
     <div class="name">Neeraj Pal</div>
-    <div class="about">Developer & Designer</div>
+    <div class="about">Follow me on</div>
     <div class="social-icons">
       <a href="https://www.facebook.com/profile.php?id=100010187047534" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
       <a href="https://twitter.com/neeraj_NJ01" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
@@ -29,5 +30,12 @@
       <button><a href="index">Home</a></button>
     </div>
   </div>
+  <script>
+    $('body').mousemove(function(p) {
+        let rotateX = -($(window).innerWidth()/2-p.pageX)/20;
+        let rotateY = -($(window).innerHeight()/2-p.pageY)/10;
+        $('.wrapper').css("transform", "rotateX("+rotateX+"deg) rotateY("+rotateY+"deg)")
+    });
+  </script>
 </body>
 </html>
