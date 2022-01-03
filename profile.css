@@ -10,7 +10,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
+  min-height: 100vh;
   background: #ecf0f3;
   perspective: 1000px;
   transform-style: preserve-3d;
