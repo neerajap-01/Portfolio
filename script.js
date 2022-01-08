@@ -125,13 +125,31 @@ init();
 const section = document.querySelector('.section'),
       hireBtn = document.querySelector('#hireBtn'),
       closeBtn = document.querySelectorAll('#close_hire');
+const home = document.getElementById('home');
+const about = document.getElementById('about');
+const education = document.getElementById('education');
+const skills = document.getElementById('skills');
+const projects = document.getElementById('projects');
+const contact = document.getElementById('contact');      
 
     hireBtn.addEventListener("click", () => {
       section.classList.add("show");
+      home.classList.add('blur');
+      about.classList.add('blur');
+      education.classList.add('blur');
+      skills.classList.add('blur');
+      projects.classList.add('blur');
+      contact.classList.add('blur');
     });
 
     closeBtn.forEach(cBtn => {
       cBtn.addEventListener("click", () => {
         section.classList.remove("show");
+        home.classList.remove('blur');
+        about.classList.remove('blur');
+        education.classList.remove('blur');
+        skills.classList.remove('blur');
+        projects.classList.remove('blur');
+        contact.classList.remove('blur');
       });
     });
