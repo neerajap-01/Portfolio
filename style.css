@@ -247,7 +247,7 @@ section .title::after{
   font-family: 'Poppins', sans-serif;
   padding: 6px 12px;
   border-radius: 6px;
-  background: #6f93f6;
+  background: #275df1;
   margin-left: 8px;
   font-size: 14px;
   cursor: pointer;
@@ -262,17 +262,19 @@ section .title::after{
 }
 .button button.cancel:hover{
   background: none;
+  font-weight: 500;
   color: crimson;
   border: 2px solid crimson;
 }
 .button button.send{
-  border: 2px solid #6f93f6;
+  border: 2px solid #275df1;
   font-weight: 500;
   color: #fff;
   transition: all 0.3s ease;
 }
 .button button.send:hover{
   background: none;
+  font-weight: 500;
   color: #275df1;
   border: 2px solid #275df1;
 }
