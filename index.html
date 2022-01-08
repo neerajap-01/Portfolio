@@ -16,11 +16,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
   </head>
   <body>
 
     <img class="mockup" src="http://drive.google.com/uc?export=view&id=1QF-VJHYva6VzxcDa7JzttykkuBvE02AC" alt="">
+
     <!-- popup section -->
+    <div class="section">
+      <div class="popup-outer">
+        <div class="popup-box">
+          <i id="close_hire" class="bx bx-x close"></i>
+          <div class="profile-text">
+            <img src="./images/profile-pic.png" alt="">
+            <div class="text">
+              <span class="name">Neeraj Pal</span>
+              <span class="profession">Fresher</span>
+            </div>
+          </div>
+          <form name="Hire me Message" method="POST" data-netlify="true">
+            <input class="name1" type="text" name="name" placeholder="Your Name" required />
+            <textarea name="message" placeholder="Enter your message..." required></textarea>
+            <div class="button">
+              <button id="close_hire" class="cancel">Cancel</button>
+              <button type="submit" class="send">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>  
+
     <div class="modal-container" id="modal-container">
       <div class="modal">
         <h1>Skills & Experience</h1>
@@ -179,7 +204,7 @@
             </div>
           </div>
           <div class="hire-me">
-            <a href="mailto:neerajap.a01@gmail.com" target="_blank">Hire me</a>
+            <a href="#" id="hireBtn">Hire me</a>
           </div>
         </div
       </div>

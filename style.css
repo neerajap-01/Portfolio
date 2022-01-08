@@ -127,6 +127,163 @@ section .title::after{
 }
 
 /* Popup section */ 
+
+/*Hire me popup*/
+.section {
+  position: fixed;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  z-index: 99999999;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+.section .popup-outer{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4s);
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2);
+  transition: opacity 0.3s 0s ease-in-out,
+              transform 0.3s 0s ease-in-out,
+
+}
+.section.show .popup-outer{
+  opacity: 1;  
+  transform: scale(1);
+  pointer-events: auto;
+}  
+.section .popup-box{
+  position: fixed;
+  padding: 30px;
+  max-width: 380px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #333;
+}
+.popup-box .close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  color: #b4b4b4;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.popup-box .close:hover{
+  color: #333;
+}
+.section .popup-box .profile-text{
+  display: flex;
+  align-items: center;
+}
+.section .popup-box img{
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.profile-text .text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+.profile-text .text .name{
+  font-size: 20px;
+  font-weight: 300;
+}
+.profile-text .text .profession{
+  font-size: 12px;
+  font-weight: 500;
+}
+.section .popup-box .name1{
+  width: 100%;
+  padding-left: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  resize: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  background: #f3f3f3;
+}
+.section .popup-box textarea{
+  min-height: 140px;
+  width: 100%;
+  margin-top: 10px;
+  outline: none;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  resize: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  background: #f3f3f3;
+}
+.section .popup-box .button{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  margin-left: 8px;
+}
+.popup-box .button button{
+  outline: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #6f93f6;
+  margin-left: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button button.cancel{
+  background: crimson;
+  font-weight: 500;
+  color: #fff;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.button button.cancel:hover{
+  background: none;
+  color: crimson;
+  border: 2px solid crimson;
+}
+.button button.send{
+  border: 2px solid #6f93f6;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.button button.send:hover{
+  background: none;
+  color: #275df1;
+  border: 2px solid #275df1;
+}
+
+
+
+
+
+
+
+/*Share popup*/
 .popup {
   position: fixed;
 }
@@ -298,7 +455,7 @@ header .close {
   border: 2px solid transparent;
 }
 
-
+/*About me popup*/
 .modal-container{
   position: fixed;
   opacity: 0;
