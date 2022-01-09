@@ -1148,10 +1148,6 @@ footer span a:hover{
   text-decoration: underline;
 }
 
-.mockup {
-  display: none;
-}
-
 /*responsive media query start*/
 @media (max-width: 1104px){
   .about .about-content .left img{
