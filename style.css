@@ -135,7 +135,7 @@ section .title::after{
   left: 50%;
   top: 50%;
   overflow: hidden;
-  z-index: 99999999;
+  z-index: 9999;
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
@@ -279,12 +279,6 @@ section .title::after{
   border: 2px solid #275df1;
 }
 
-
-
-
-
-
-
 /*Share popup*/
 .popup {
   position: fixed;
@@ -315,7 +309,7 @@ section .title::after{
   left: 35%;
   border-radius: 15px;
   max-width: 380px;
-  z-index: 99999;
+  z-index: 9999;
   width: 100%;
   border: 2px solid #111;
   background: #fff;
@@ -465,7 +459,7 @@ header .close {
   top: 0;
   display: flex;
   align-items: center;
-  z-index: 5;
+  z-index: 9999;
   justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -549,6 +543,66 @@ header .close {
   transition: opacity 0.3s ease; 
 }
 
+/* Custom Right click */
+.wrapper1{
+  width: 300px;
+  position: absolute;
+  z-index: 9999;
+  visibility: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+.wrapper1 .menu{
+  padding: 10px 12px;
+}
+.content1 .item{
+  list-style: none;
+  font-size: 22px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  padding: 0 5px 0 10px;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+.content1 .item:hover{
+  background: #f2f2f2;
+}
+.content1 .item span{
+  font-size: 19px;
+  margin-left: 8px;
+}
+.content1 .setting{
+  display: flex;
+  padding: 5px 12px;
+  margin-top: -5px;
+  border-top: 1px solid #ccc;
+}
+.content1 .share{
+  position: relative;
+  justify-content: space-between;
+}
+.share .share-menu{
+  position: absolute;
+  background: #fff;
+  width: 200px;
+  right: -200px;
+  top: -35px;
+  border-radius: 10px;
+  padding: 13px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}  
+.share:hover .share-menu{
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /*menu btn styling*/
 .menu-btn{
   color: #fff;
@@ -566,7 +620,7 @@ header .close {
   text-align: center;
   line-height: 45px;
   color: #fff;
-  z-index: 9999;
+  z-index: 99999;
   font-size: 30px;
   border-radius: 6px;
   cursor: pointer;
@@ -1148,6 +1202,10 @@ footer span a:hover{
   text-decoration: underline;
 }
 
+.mockup{
+  display: none;
+}
+
 /*responsive media query start*/
 @media (max-width: 1104px){
   .about .about-content .left img{
@@ -1168,7 +1226,7 @@ footer span a:hover{
 @media (max-width: 947px){
   .menu-btn{
     display: block;
-    z-index: 999;
+    z-index: 99999;
   }
   .menu-btn i.active:before{
     content: "\f00d";

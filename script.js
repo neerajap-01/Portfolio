@@ -96,6 +96,42 @@ $(document).ready(function() {
         }
       }
     });
+
+    // Custom Right Click
+  const contextMenu = document.querySelector(".wrapper1",".about"),
+  shareMenu = contextMenu.querySelector(".share-menu");
+
+  document.addEventListener("contextmenu", e => {
+    e.preventDefault(); // prevent default context menu of the browser
+
+    let x = e.offsetX, y = e.offsetY,
+    winWidth = window.innerWidth
+    winHeight = window.innerHeight,
+    cmWidth = contextMenu.offsetWidth,
+    cmHeight = contextMenu.offsetHeight;
+
+    // if x is greater than window width - contextMenu width - shareMenu width
+    // when show the share menu to the left else show it to the right
+    if(x > (winWidth - cmWidth - shareMenu.offsetWidth)) {
+      shareMenu.style.left ="-200px";
+    } else {
+      shareMenu.style.left ="";
+      shareMenu.style.right ="-200px";
+    }
+
+    // if x is greater than window width - contextMenu width then set the x value
+    // to window width - contextMenu width else set x to the offsetX. Similarly, to y.
+    x = x > winWidth - cmWidth ? winWidth - cmWidth : x;
+    y = y > winHeight - cmHeight ? winHeight - cmHeight : y;
+
+    contextMenu.style.left = `${x}px`;
+    contextMenu.style.top = `${y}px`;
+    contextMenu.style.visibility = "visible";
+  });
+
+  //hide the context menu on click
+  document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
+
 });
 
 //Sharing Social Buttons
@@ -132,24 +168,24 @@ const skills = document.getElementById('skills');
 const projects = document.getElementById('projects');
 const contact = document.getElementById('contact');      
 
-    hireBtn.addEventListener("click", () => {
-      section.classList.add("show");
-      home.classList.add('blur');
-      about.classList.add('blur');
-      education.classList.add('blur');
-      skills.classList.add('blur');
-      projects.classList.add('blur');
-      contact.classList.add('blur');
-    });
+hireBtn.addEventListener("click", () => {
+  section.classList.add("show");
+  home.classList.add('blur');
+  about.classList.add('blur');
+  education.classList.add('blur');
+  skills.classList.add('blur');
+  projects.classList.add('blur');
+  contact.classList.add('blur');
+});
 
-    closeBtn.forEach(cBtn => {
-      cBtn.addEventListener("click", () => {
-        section.classList.remove("show");
-        home.classList.remove('blur');
-        about.classList.remove('blur');
-        education.classList.remove('blur');
-        skills.classList.remove('blur');
-        projects.classList.remove('blur');
-        contact.classList.remove('blur');
-      });
-    });
+closeBtn.forEach(cBtn => {
+  cBtn.addEventListener("click", () => {
+    section.classList.remove("show");
+    home.classList.remove('blur');
+    about.classList.remove('blur');
+    education.classList.remove('blur');
+    skills.classList.remove('blur');
+    projects.classList.remove('blur');
+    contact.classList.remove('blur');
+  });
+});
