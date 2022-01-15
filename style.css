@@ -547,14 +547,21 @@ header .close {
 .wrapper1{
   width: 300px;
   position: absolute;
-  z-index: 9999;
+  z-index: 99;
   visibility: hidden;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
 }
+.wrapper1.show {
+  visibility: visible;
+}
 .wrapper1 .menu{
   padding: 10px 12px;
+}
+.wrapper1 .menu a{
+  color: #111;
+  text-decoration: none;
 }
 .content1 .item{
   list-style: none;
