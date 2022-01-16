@@ -545,7 +545,7 @@ header .close {
 
 /* Custom Right click */
 .wrapper1{
-  width: 300px;
+  width: 270px;
   position: absolute;
   z-index: 99;
   visibility: hidden;
@@ -1386,7 +1386,12 @@ footer span a:hover{
   .popup {
     left: 10%;
   }
-}  
+} 
+@media (max-width: 460px){
+  .wrapper1{
+    width: 230px; 
+  }
+}    
 @media (max-width: 435px){
   .popup {
     left: 5%;
