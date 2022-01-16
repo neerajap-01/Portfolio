@@ -159,7 +159,7 @@ closeBtn.forEach(cBtn => {
     shareMenu = contextMenu.querySelector(".share-menu");
   
     document.addEventListener("contextmenu", e => {
-      //e.preventDefault(); // prevent default context menu of the browser
+      e.preventDefault(); // prevent default context menu of the browser
   
       let x = e.pageX, y = e.pageY,
       winWidth = window.innerWidth
