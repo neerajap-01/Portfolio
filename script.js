@@ -98,25 +98,35 @@ $(document).ready(function() {
     });
 });
 
-//Sharing Social Buttons
+//Sharing Social Buttons in Share button and menu.
 
-const facebookBtn = document.querySelector('.facebook-btn');
-const whatsappBtn = document.querySelector('.whatsapp-btn');
-const twitterBtn = document.querySelector('.twitter-btn');
-const pinterestBtn = document.querySelector('.pinterest-btn');
-const linkedinBtn = document.querySelector('.linkedin-btn');
-const mockupImg = document.querySelector('.mockup');
+const facebookBtn = document.querySelectorAll('.facebook-btn');
+const whatsappBtn = document.querySelectorAll('.whatsapp-btn');
+const twitterBtn = document.querySelectorAll('.twitter-btn');
+const pinterestBtn = document.querySelectorAll('.pinterest-btn');
+const linkedinBtn = document.querySelectorAll('.linkedin-btn');
+const mockupImg = document.querySelectorAll('.mockup');
 
 function init() {
   let postUrl = encodeURI("https://www.neerajpal.me");
   let postTitle = encodeURI("Hi, check out this Portfolio website: ");
   let postImg = encodeURI(mockupImg.src);
 
-  facebookBtn.setAttribute("href", `https://www.facebook.com/sharer.php?u=${postUrl}`);
-  whatsappBtn.setAttribute("href", `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`);
-  twitterBtn.setAttribute("href", `https://twitter.com/share?url=${postUrl}&text=${postTitle}&hashtags=[hashtags]`);
-  pinterestBtn.setAttribute("href", `https://pinterest.com/pin/create/bookmarklet/?media=${postImg}&url=${postUrl}&is_video=[is_video]&description=${postTitle}`);
-  linkedinBtn.setAttribute("href", `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`);
+  facebookBtn.forEach(fBtn => {
+    fBtn.setAttribute("href", `https://www.facebook.com/sharer.php?u=${postUrl}`);
+  });
+  whatsappBtn.forEach(wBtn => {
+    wBtn.setAttribute("href", `https://api.whatsapp.com/send?text=${postTitle} ${postUrl}`);
+  });
+  twitterBtn.forEach(tBtn => {
+    tBtn.setAttribute("href", `https://twitter.com/share?url=${postUrl}&text=${postTitle}`);
+  });
+  pinterestBtn.forEach(pBtn => {
+    pBtn.setAttribute("href", `https://pinterest.com/pin/create/bookmarklet/?media=${postImg}&url=${postUrl}&is_video=[is_video]&description=${postTitle}`);
+  });
+  linkedinBtn.forEach(lBtn => {
+    lBtn.setAttribute("href", `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postTitle}`);
+  });
 }
 
 init();
@@ -154,38 +164,37 @@ closeBtn.forEach(cBtn => {
   });
 });
 
-    // Custom Right Click
-    const contextMenu = document.querySelector(".wrapper1",".about"),
-    shareMenu = contextMenu.querySelector(".share-menu");
-  
-    document.addEventListener("contextmenu", e => {
-      e.preventDefault(); // prevent default context menu of the browser
-  
-      let x = e.pageX, y = e.pageY,
-      winWidth = window.innerWidth
-      winHeight = window.offsetHeight,
-      cmWidth = contextMenu.offsetWidth,
-      cmHeight = contextMenu.offsetHeight;
-  
-      // if x is greater than window width - contextMenu width - shareMenu width
-      // then show the share menu to the left else show it to the right
-      if(x > (winWidth - cmWidth - shareMenu.offsetWidth)) {
-        shareMenu.style.left ="-200px";
-      } else {
-        shareMenu.style.left ="";
-        shareMenu.style.right ="-200px";
-      }
-  
-      // if x is greater than window width - contextMenu width then set the x value
-      // to window width - contextMenu width else set x to the offsetX. Similarly, to y.
-      x = x > winWidth - cmWidth ? winWidth - cmWidth : x;
-      y = y > winHeight - cmHeight ? winHeight - cmHeight : y;
-  
-      contextMenu.style.left = `${x}px`;
-      contextMenu.style.top = `${y}px`;
-      contextMenu.style.visibility = "visible";
-    });
-  
-    //hide the context menu on click
-    document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
-  
+// Custom Right Click
+const contextMenu = document.querySelector(".wrapper1",".about"),
+shareMenu = contextMenu.querySelector(".share-menu");
+
+document.addEventListener("contextmenu", e => {
+  e.preventDefault(); // prevent default context menu of the browser
+
+  let x = e.pageX, y = e.pageY,
+  winWidth = window.innerWidth
+  winHeight = window.offsetHeight,
+  cmWidth = contextMenu.offsetWidth,
+  cmHeight = contextMenu.offsetHeight;
+
+  // if x is greater than window width - contextMenu width - shareMenu width
+  // then show the share menu to the left else show it to the right
+  if(x > (winWidth - cmWidth - shareMenu.offsetWidth)) {
+    shareMenu.style.left ="-200px";
+  } else {
+    shareMenu.style.left ="";
+    shareMenu.style.right ="-200px";
+  }
+
+  // if x is greater than window width - contextMenu width then set the x value
+  // to window width - contextMenu width else set x to the offsetX. Similarly, to y.
+  x = x > winWidth - cmWidth ? winWidth - cmWidth : x;
+  y = y > winHeight - cmHeight ? winHeight - cmHeight : y;
+
+  contextMenu.style.left = `${x}px`;
+  contextMenu.style.top = `${y}px`;
+  contextMenu.style.visibility = "visible";
+});
+
+//hide the context menu on click
+document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
