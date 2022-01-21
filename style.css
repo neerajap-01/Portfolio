@@ -624,11 +624,11 @@ header .close {
 }
 .scroll-up-btn{
   position: fixed;
-  height: 45px;
-  width: 42px;
+  height: 40px;
+  width: 37px;
   background: crimson;
-  right: 100px;
-  bottom: 10px;
+  left: 30px;
+  margin-bottom: 45px;
   text-align: center;
   line-height: 45px;
   color: #fff;
@@ -1373,7 +1373,8 @@ footer span a:hover{
       width: 150px;
   }
   .scroll-up-btn{
-      right: 15px;
+      left: 15px;
+      margin-bottom: 45px;
       bottom: 15px;
       height: 38px;
       width: 35px;
