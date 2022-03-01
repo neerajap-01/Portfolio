@@ -198,3 +198,30 @@ document.addEventListener("contextmenu", e => {
 
 //hide the context menu on click
 document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
+
+//Custom Cursor
+const cursor = document.querySelector(".cursor");
+var timeout;
+
+//follow the cursor on mousemove
+document.addEventListener("mousemove", (e)=>{
+  let x = e.pageX;
+  let y = e.pageY;
+
+  cursor.style.top = y + "px";
+  cursor.style.left = x + "px";
+  cursor.style.display = "block";
+});
+
+//cursor effects on mouseout
+document.addEventListener("mouseout", ()=>{
+  cursor.style.display = "none";
+
+  //cursor effects on mouse stop
+  function mouseStopped() {
+    cursor.style.display = "none";
+  }
+  clearTimeout(timeout);
+  timeout = setTimeout(mouseStopped, 1000);
+});
+
