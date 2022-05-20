@@ -402,6 +402,13 @@ img{
   font-size: var(--smaller-font-size);
 }
 
+.projects_description a {
+  color: var(--text-color);
+}
+.projects_description a:hover{
+  color: var(--title-color);
+}
+
 /*========== SKILLS AND LANGUAGES ==========*/
 .skills_content,
 .languages_content{
