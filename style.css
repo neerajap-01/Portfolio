@@ -1479,11 +1479,17 @@ footer span a:hover{
     left: 10%;
   }
 } 
-@media (max-width: 460px){
+@media (max-width: 465px){
   .wrapper1{
-    display: none
+    width: 235px
   }
 }    
+@media (max-width: 430px){
+  .wrapper1{
+    display: none;
+    pointer-events: none;
+  }
+}       
 @media (max-width: 435px){
   .popup {
     left: 5%;
