@@ -1481,7 +1481,7 @@ footer span a:hover{
 } 
 @media (max-width: 460px){
   .wrapper1{
-    width: 235px; 
+    display: none
   }
 }    
 @media (max-width: 435px){
