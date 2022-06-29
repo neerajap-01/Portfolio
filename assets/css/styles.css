@@ -52,6 +52,19 @@ body.dark-theme{
   --container-color-alt: #181616;
   --body-color: #2B2B2B;
 }
+/*========== Button Projects logo ==========*/
+.project-logo{
+  right: 0;
+  top: 2.2em;
+  padding-left: 1.5rem;
+  /* display: inline-flex; */
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.project-logo:hover{
+  color: var(--text-color);
+}
 
 /*========== Button Dark/Light ==========*/
 .change-theme{
@@ -100,10 +113,10 @@ body.scale-cv{
   max-width: 595px;
 }
 .scale-cv .section{
-  padding: 1.5ren 0 .80rem;
+  padding: 1.5rem 0.80rem;
 }
 .scale-cv .section-title{
-  margin-bottom: .75rem;
+  margin-bottom: 1.17rem;
 }
 .scale-cv .resume__left,
 .scale-cv .resume__right{
