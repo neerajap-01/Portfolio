@@ -164,7 +164,7 @@
         <p>Or copy link</p>
         <div class="field">
           <i class="uil uil-link"></i>
-          <input type="text" value="https://www.neerajpal.me/">
+          <input disabled type="text" value="https://www.neerajpal.dev">
           <button>Copy</button>
         </div>
       </div>
@@ -185,7 +185,7 @@
       close = popup.querySelector(".close");
       field = popup.querySelector(".field");
       input = popup.querySelector("input");
-      copy = popup.querySelector("button");
+      copyBtn = popup.querySelector("button");
 
 
       viewBtn.onclick = ()=> {
@@ -206,14 +206,19 @@
         projects.classList.remove('blur');
         contact.classList.remove('blur');
       }
-      copy.onclick = () =>{
-        input.select(); //select input value
+      copyBtn.onclick = async () =>{
+        console.log("first", input.value)
+        const url = input.value; //select input value
+
+        //copy the url to clipboard
+        await navigator.clipboard.writeText(url);
+        
         if(document.execCommand("copy")){
           field.classList.add("active");
-          copy.innerText = "Copied";
+          copyBtn.innerText = "Copied";
           setTimeout(() =>{
             field.classList.remove("active");
-            copy.innerText = "Copy";
+            copyBtn.innerText = "Copy";
             window.getSelection().removeAllRanges();
           }, 3000);
         }
@@ -371,10 +376,10 @@
 
             <div class="bars">
               <div class="info">
-                <span>Python</span>
-                <span>60%</span>
+                <span>ReactJS</span>
+                <span>90%</span>
               </div>
-              <div class="line Python"></div>
+              <div class="line ReactJS"></div>
             </div>  
 
             <div class="bars">
@@ -395,10 +400,10 @@
 
             <div class="bars">
               <div class="info">
-                <span>Html</span>
-                <span>65%</span>
+                <span>Typescript</span>
+                <span>60%</span>
               </div>
-              <div class="line Html"></div>
+              <div class="line Typescript"></div>
             </div>
 
             <div class="bars">
