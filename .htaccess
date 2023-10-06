@@ -1,6 +1,6 @@
 # 404 notfound html linking
 
-ErrorDocument 404 /Pages/404-page/404.html
+ErrorDocument 404 /404.html
 
 #mod_rewrite starts here
 
