@@ -196,32 +196,37 @@ document.addEventListener("contextmenu", e => {
   contextMenu.style.visibility = "visible";
 });
 
+//Change footer Year
+const footerText = document.getElementById('footerYear');
+const date = new Date();
+footerText.innerHTML = `${date.getFullYear()} All rights reserved.`;
+
 //hide the context menu on click
 document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
 
-//Custom Cursor
-const cursor = document.querySelector(".cursor");
-var timeout;
+// //Custom Cursor
+// const cursor = document.querySelector(".cursor");
+// var timeout;
 
-//follow the cursor on mousemove
-document.addEventListener("mousemove", (e)=>{
-  let x = e.pageX;
-  let y = e.pageY;
+// //follow the cursor on mousemove
+// document.addEventListener("mousemove", (e)=>{
+//   let x = e.pageX;
+//   let y = e.pageY;
 
-  cursor.style.top = y + "px";
-  cursor.style.left = x + "px";
-  cursor.style.display = "block";
-});
+//   cursor.style.top = y + "px";
+//   cursor.style.left = x + "px";
+//   cursor.style.display = "block";
+// });
 
-//cursor effects on mouseout
-document.addEventListener("mouseout", ()=>{
-  cursor.style.display = "none";
+// //cursor effects on mouseout
+// document.addEventListener("mouseout", ()=>{
+//   cursor.style.display = "none";
 
-  //cursor effects on mouse stop
-  function mouseStopped() {
-    cursor.style.display = "none";
-  }
-  clearTimeout(timeout);
-  timeout = setTimeout(mouseStopped, 1000);
-});
+//   //cursor effects on mouse stop
+//   function mouseStopped() {
+//     cursor.style.display = "none";
+//   }
+//   clearTimeout(timeout);
+//   timeout = setTimeout(mouseStopped, 1000);
+// });
 

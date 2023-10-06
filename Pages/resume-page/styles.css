@@ -110,10 +110,10 @@ body.scale-cv{
   display: none;
 }
 .scale-cv .bd-container{
-  max-width: 595px;
+  max-width: 700px;
 }
 .scale-cv .section{
-  padding: 1.5rem 0.80rem;
+  padding: 1.44rem 0.80rem;
 }
 .scale-cv .section-title{
   margin-bottom: 1.17rem;
